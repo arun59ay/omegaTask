@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: omega;
-    src: url("./assets/fonts/Circular.ttf") format("woff");
+    src: url("./assets/fonts/Circular.ttf") format("woff2");
 }
 
 body{
@@ -13,9 +13,5 @@ body{
 
 .container{
     width: 100%;
-    height: 100%;
     max-width: 90%;
-    padding: 0px 10px;
-    margin-right: auto;
-    margin-left: auto;
 }
