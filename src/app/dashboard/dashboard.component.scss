@@ -1,0 +1,79 @@
+@import "../../assets/style/variables.scss";
+@import "../../assets/style/mixin.scss";
+
+.dashboard{
+    background-color: $blue;
+    height: 85vh;
+    .dashboardCard{
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $white;
+            margin: 0px 15px;
+            padding: 15px 0px;
+            .logo{
+                font-size: $fontSize18;
+                font-weight: $fw600;
+            }
+            .headerMid{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                font-size: $fontSize12;
+            }
+            .cart{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                font-size: $fontSize14;
+                .cartNumber{
+                    background-color: $ochereYellow;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .homePage{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 100px;
+            .homeSection{
+                margin: 0px 10rem;
+                padding-left: 12rem;
+                .homeImage{
+                    height: 60%;
+                    width: 60%;
+                }
+            }
+            .contentHeading{
+                color: $white;
+                .homeHeading{
+                    width: 50%;
+                    @include heading;
+                    margin-bottom: 15px;
+                }
+                .headingContent{
+                    font-size: $fontSize12;
+                    margin-bottom: 15px;
+                }
+            }
+            .discountSection{
+                background-color: $liteBlue;
+                width: 12rem;
+                .discountContent{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

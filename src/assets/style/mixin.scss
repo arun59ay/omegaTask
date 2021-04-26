@@ -1,0 +1,6 @@
+@import "./variables.scss";
+
+@mixin heading{
+    font-size: $fontSize30;
+    font-weight: $fw600;
+}
