@@ -76,10 +76,74 @@
         display: flex;
         align-items: center;
         margin-left: 7rem;
-         .sectionHeading{
-             @include heading;
-             width: 55%;
-         }
+        .rightSectionContent{   
+            .sectionHeading{
+                @include heading;
+                width: 65%;   
+            }
+            .sectionSubHeading{
+                color: $white;
+                font-size: $fontSize14;
+                font-weight: 100;
+                width: 67%;  
+                margin-top: 20px;
+                line-height: 2; 
+            }
+            .discountCard{
+                background-color: $liteBlue;
+                width: 36%;
+                padding: 5px 8px;
+                border-radius: 10px;
+                margin-top: 20px;
+                cursor: pointer;
+                .discountCardContent{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 5px;
+                    .price{
+                        color: $white;
+                        font-weight: $fw800;
+                        font-size: $fontSize36;
+                    }
+                    .btn{
+                        background-color: $green;
+                        color: $white;
+                        border-radius: 10px;
+                        outline: none;
+                        border: 1px solid $green;
+                        padding: 8px 5px;
+                        margin-left: 10px;
+                    }
+                }
+                .originalPrice{
+                    color: $white;
+                    font-size: $fontSize14;
+                    font-weight: $fw100;
+                }
+            }
+            .cartItem{
+                margin-top: 15px;
+                .cartCount{
+                    display: flex;
+                    align-items: center;
+                    .cart{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 3px;
+                        outline: none;
+                        border: 1px solid $white;
+                    }
+                    .cartItemCount{
+                        display: flex;
+                        flex-direction: column;
+                        .btn{
+                            height: 22px;
+                            width: 22px;
+                        }
+                    }
+                }
+            }
+        }
      }
     }
   }
