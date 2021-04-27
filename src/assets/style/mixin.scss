@@ -5,3 +5,10 @@
     font-weight: $fw600;
     color: $white;
 }
+
+@mixin blocks{
+    width: 14rem;
+    height: 2.2rem;
+    background-color: $white;
+    border-radius: 10px;
+}

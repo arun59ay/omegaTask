@@ -60,91 +60,610 @@
     height: calc(100vh - 80px);
     width: 100%;
     .headphoneSection {
-     max-width: 100%;
-     display: flex;
-     margin: 0 15%;
-     padding-top: 5rem;
-     .leftSection{
-         display: flex;
-         align-items: center;
-         img{
-            width: 90%;
-            height: 100%;        
-         }
-     }
-     .rightSection{
+      max-width: 100%;
+      display: flex;
+      margin: 0 15%;
+      padding-top: 5rem;
+      .leftSection {
+        display: flex;
+        align-items: center;
+        img {
+          width: 90%;
+          height: 100%;
+        }
+      }
+      .rightSection {
         display: flex;
         align-items: center;
         margin-left: 7rem;
-        .rightSectionContent{   
-            .sectionHeading{
-                @include heading;
-                width: 65%;   
-            }
-            .sectionSubHeading{
+        .rightSectionContent {
+          .sectionHeading {
+            @include heading;
+            width: 65%;
+          }
+          .sectionSubHeading {
+            color: $white;
+            font-size: $fontSize14;
+            font-weight: 100;
+            width: 67%;
+            margin-top: 20px;
+            line-height: 2;
+          }
+          .discountCard {
+            background-color: $liteBlue;
+            width: 36%;
+            padding: 5px 8px;
+            border-radius: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+            .discountCardContent {
+              display: flex;
+              align-items: center;
+              margin-bottom: 5px;
+              .price {
                 color: $white;
-                font-size: $fontSize14;
-                font-weight: 100;
-                width: 67%;  
-                margin-top: 20px;
-                line-height: 2; 
-            }
-            .discountCard{
-                background-color: $liteBlue;
-                width: 36%;
-                padding: 5px 8px;
+                font-weight: $fw800;
+                font-size: $fontSize36;
+              }
+              .btn {
+                background-color: $green;
+                color: $white;
                 border-radius: 10px;
-                margin-top: 20px;
-                cursor: pointer;
-                .discountCardContent{
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 5px;
-                    .price{
-                        color: $white;
-                        font-weight: $fw800;
-                        font-size: $fontSize36;
-                    }
-                    .btn{
-                        background-color: $green;
-                        color: $white;
-                        border-radius: 10px;
-                        outline: none;
-                        border: 1px solid $green;
-                        padding: 8px 5px;
-                        margin-left: 10px;
-                    }
-                }
-                .originalPrice{
-                    color: $white;
-                    font-size: $fontSize14;
-                    font-weight: $fw100;
-                }
+                outline: none;
+                border: 1px solid $green;
+                padding: 8px 5px;
+                margin-left: 10px;
+              }
             }
-            .cartItem{
-                margin-top: 15px;
-                .cartCount{
-                    display: flex;
-                    align-items: center;
-                    .cart{
-                        width: 40px;
-                        height: 40px;
-                        border-radius: 3px;
-                        outline: none;
-                        border: 1px solid $white;
-                    }
-                    .cartItemCount{
-                        display: flex;
-                        flex-direction: column;
-                        .btn{
-                            height: 22px;
-                            width: 22px;
-                        }
-                    }
-                }
+            .originalPrice {
+              color: $white;
+              font-size: $fontSize14;
+              font-weight: $fw100;
             }
+          }
+          .cartItem {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            .cartCount {
+              display: flex;
+              align-items: center;
+              .cart {
+                width: 10px;
+                height: 10px;
+                padding: 15px;
+                outline: none;
+                border: none;
+                float: left;
+              }
+              .cartItemCount {
+                display: flex;
+                flex-direction: column;
+                .btn {
+                  cursor: pointer;
+                  float: left;
+                  outline: none;
+                  border: none;
+                  height: 20px;
+                  width: 20px;
+                }
+              }
+            }
+            .addToCart {
+              .cartBtn {
+                background-color: $ochereYellow;
+                border-radius: 5px;
+                width: 7.5rem;
+                height: 2.6rem;
+                outline: none;
+                border: 1px solid $ochereYellow;
+                font-size: $fontSize12;
+                font-weight: $fw700;
+              }
+            }
+          }
         }
-     }
+      }
+    }
+  }
+
+  // second Section
+  .secondSection {
+    // background-color: $blue;
+    height: calc(100vh - 80px);
+    width: 100%;
+    .headphoneSection {
+      max-width: 100%;
+      display: flex;
+      margin: 0 15%;
+      padding-top: 10rem;
+
+      .leftSection {
+        display: flex;
+        align-items: center;
+        margin-left: 7rem;
+        .leftSectionContent {
+          .sectionHeading {
+            @include heading;
+            width: 59%;
+            color: #000;
+          }
+          .sectionSubHeading {
+            font-size: $fontSize14;
+            font-weight: 100;
+            width: 67%;
+            margin-top: 20px;
+            line-height: 2;
+          }
+          .designFeatures {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 25px;
+            .design {
+              background-color: $bgRed;
+              width: 40px;
+              height: 40px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 50%;
+              .cardImg {
+                height: 20px;
+                width: 20px;
+              }
+            }
+            .designFeatureContent {
+              width: 12rem;
+              font-size: $fontSize14;
+            }
+          }
+          .mobileDesign {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 25px;
+            .design {
+              background-color: $bgBlue;
+              width: 40px;
+              height: 40px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 50%;
+              .mobileImg {
+                height: 20px;
+                width: 20px;
+              }
+            }
+            .designFeatureContent {
+              width: 8rem;
+              font-size: $fontSize14;
+            }
+          }
+        }
+      }
+      .rightSection {
+        display: flex;
+        align-items: center;
+        img {
+          width: 90%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  // Third Section
+  .thirdSection {
+    background-color: $purple;
+    padding: 6rem;
+    .thirdSectionHeading {
+      @include heading;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      .headingContent {
+        width: 18rem;
+      }
+    }
+    .featuresBlock {
+      margin-top: 4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6rem;
+      .blockOne {
+        @include blocks;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 8px;
+        .design {
+          background-color: $bgRed;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          .mobileImg {
+            height: 20px;
+            width: 20px;
+          }
+        }
+        .designFeatureContent {
+          font-size: $fontSize14;
+          font-weight: $fw700;
+        }
+      }
+      .blockTwo {
+        @include blocks;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 8px;
+        .design {
+          background-color: $bgBlue;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          .mobileImg {
+            height: 20px;
+            width: 20px;
+          }
+        }
+        .designFeatureContent {
+          font-size: $fontSize14;
+          font-weight: $fw700;
+        }
+      }
+      .blockThree {
+        @include blocks;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 8px;
+        .design {
+          background-color: $bgYellow;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          .mobileImg {
+            height: 20px;
+            width: 20px;
+          }
+        }
+        .designFeatureContent {
+          font-size: $fontSize14;
+          font-weight: $fw700;
+        }
+      }
+    }
+    .featuresBlockTwo {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6rem;
+      .blockOne {
+        @include blocks;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 8px;
+        .design {
+          background-color: $bgBlue;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          .mobileImg {
+            height: 20px;
+            width: 20px;
+          }
+        }
+        .designFeatureContent {
+          font-size: $fontSize14;
+          font-weight: $fw700;
+        }
+      }
+      .blockTwo {
+        @include blocks;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 8px;
+        .design {
+          background-color: $bgRed;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          .mobileImg {
+            height: 20px;
+            width: 20px;
+          }
+        }
+        .designFeatureContent {
+          font-size: $fontSize14;
+          font-weight: $fw700;
+        }
+      }
+    }
+    .featuresBlockThree {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6rem;
+      .blockOne {
+        @include blocks;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 8px;
+        .design {
+          background-color: $bgGreen;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          .mobileImg {
+            height: 20px;
+            width: 20px;
+          }
+        }
+        .designFeatureContent {
+          font-size: $fontSize14;
+          font-weight: $fw700;
+        }
+      }
+      .blockTwo {
+        @include blocks;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 8px;
+        .design {
+          background-color: $bgRed;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          .mobileImg {
+            height: 20px;
+            width: 20px;
+          }
+        }
+        .designFeatureContent {
+          font-size: $fontSize14;
+          font-weight: $fw700;
+        }
+      }
+      .blockThree {
+        @include blocks;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 8px;
+        .design {
+          background-color: $bgBlue;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          .mobileImg {
+            height: 20px;
+            width: 20px;
+          }
+        }
+        .designFeatureContent {
+          font-size: $fontSize14;
+          font-weight: $fw700;
+        }
+      }
+    }
+  }
+  // forth Section
+  .forthSection {
+    .headingContent {
+      text-align: center;
+      margin-top: 5rem;
+      .forthSectionHeading {
+        @include heading;
+        color: #000;
+      }
+    }
+    .subheadingContent {
+      display: flex;
+      justify-content: center;
+      .sectionSubHeading {
+        text-align: center;
+        margin-top: 25px;
+        font-size: $fontSize14;
+        width: 28rem;
+      }
+    }
+    .cards {
+      display: flex;
+      justify-content: center;
+      margin-top: 45px;
+      .manCard {
+        width: 25%;
+        height: 25%;
+      }
+      .womenCard {
+        height: 46%;
+        width: 45.5%;
+      }
+    }
+  }
+
+  //fifth Section
+  .fifthSection {
+    background: url("../../assets/images/bgImg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    .fifthHeading {
+      padding-top: 12rem;
+      @include heading;
+      margin-left: 12rem;
+      width: 20rem;
+    }
+    .fifthSubHeading {
+      font-size: $fontSize14;
+      width: 20rem;
+      margin-left: 12rem;
+      margin-top: 30px;
+      color: $white;
+    }
+    .tryBtn {
+      margin-left: 12rem;
+      margin-top: 4rem;
+      display: flex;
+      align-items: center;
+      .btn {
+        padding: 10px;
+        height: 2rem;
+        width: 8rem;
+        background-color: $ochereYellow;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid $ochereYellow;
+        font-size: $fontSize12;
+        font-weight: $fw700;
+      }
+    }
+  }
+
+  //Sixth Section
+  .sixthSection {
+    margin-bottom: 12rem;
+    .headingContent {
+      text-align: center;
+      margin-top: 5rem;
+      .forthSectionHeading {
+        @include heading;
+        color: #000;
+      }
+    }
+    .subheadingContent {
+      display: flex;
+      justify-content: center;
+      .sectionSubHeading {
+        text-align: center;
+        margin-top: 25px;
+        font-size: $fontSize14;
+        width: 23rem;
+      }
+    }
+    .feedback {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      margin-top: 4rem;
+      gap: 20px;
+      .feedbackConfig {
+        width: 22%;
+        border-radius: 9px;
+        border: solid 0.9px #eae9f2;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 25px;
+        .feedbackContent {
+          font-size: $fontSize14;
+          font-weight: $fw500;
+        }
+        .feedbackPerson {
+          margin-top: 20px;
+          display: flex;
+          align-items: center;
+          .personInfo {
+            margin-left: 10px;
+            .personName {
+              font-size: $fontSize14;
+              font-weight: $fw600;
+            }
+            .personDesignation {
+              font-size: $fontSize10;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //seventh Section
+  .seventhSection {
+    background-color: $blue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 6rem 0;
+    .seventhHeading {
+      @include heading;
+    }
+    .buyBtn {
+      margin-left: 20px;
+      .btn {
+        background-color: $ochereYellow;
+        height: 3rem;
+        width: 8rem;
+        outline: none;
+        border: 1px solid $ochereYellow;
+        border-radius: 5px;
+        font-size: $fontSize14;
+        font-weight: $fw600;
+      }
+    }
+  }
+  //footer Section
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    padding: 0 8rem;
+    gap: 12rem;
+    .siteLogo {
+      font-size: $fontSize18;
+      font-weight: 700;
+    }
+    .navLinks {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      .navItems {
+        font-size: $fontSize14;
+        cursor: pointer;
+        &:focus {
+          color: $white;
+        }
+      }
+    }
+    .rightHeaderSection {
+      font-size: $fontSize14;
     }
   }
 }
